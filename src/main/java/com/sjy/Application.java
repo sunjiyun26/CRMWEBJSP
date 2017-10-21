@@ -12,6 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @SpringBootApplication
 @Controller
+/**
+ * The first step in producing a deployable war file is to provide a SpringBootServletInitializer subclass and override its configure() method. 
+ * This makes use of Spring Framework’s Servlet 3.0 support and allows you to configure your application
+ * when it’s launched by the servlet container.
+ * @author sunjiyun
+ *
+ */
 public class Application extends SpringBootServletInitializer {
 
     @RequestMapping("/")
@@ -19,6 +26,7 @@ public class Application extends SpringBootServletInitializer {
         return "login";
     }
 
+    
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Application.class);
