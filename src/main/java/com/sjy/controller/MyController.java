@@ -1,14 +1,14 @@
 package com.sjy.controller;
 
-import java.util.Map;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Map;
 
 @Controller
 public class MyController {
  
-	@RequestMapping("/homemap")
+	@RequestMapping("/homemap1")
     public String home(Map<String, Object> model) {
         model.put("message", "HowToDoInJava Reader !!");
         return "index";
